@@ -9,6 +9,7 @@ export default function Game() {
   const xIsNext = currentMove % 2 === 0;
   const currentSquares = history[currentMove];
   const winner = calculateWinner(currentSquares);
+  const gameStatus = calculateGameStatus(xIsNext, currentSquares, winner);
 
   function handlePlay(i) {
     if (winner || currentSquares[i]) {
@@ -28,13 +29,20 @@ export default function Game() {
     setCurrentMove(nextHistory.length - 1);
   }
 
+  function handleChangeHistory(i) {
+    console.log(`Change to history ${i}`);
+  }
+
   return (
     <div className="game">
       <div className="status">
-        <h2>Game status</h2>
+        <h2>{gameStatus}</h2>
       </div>
       <Board squares={currentSquares} onPlay={(i) => handlePlay(i)} />
-      <History />
+      <History
+        history={history}
+        onChangeHistory={(i) => handleChangeHistory(i)}
+      />
     </div>
   );
 }
@@ -57,4 +65,16 @@ function calculateWinner(squares) {
     }
   }
   return null;
+}
+
+function calculateGameStatus(xIsNext, currentSquares, winner) {
+  if (winner) {
+    return xIsNext ? "Winner: O" : "Winner: X";
+  }
+
+  if (currentSquares.every((value) => value !== null)) {
+    return "No Winner";
+  }
+
+  return xIsNext ? "X is next" : "O is next";
 }

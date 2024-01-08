@@ -1,7 +1,7 @@
 export default function Header() {
   return (
     <header>
-      <h1>X Tic-tac-toe O</h1>
+      <h1>Tic-tac-toe</h1>
     </header>
   );
 }
