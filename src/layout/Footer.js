@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer>
-      <h2>Footer</h2>
+      <h2>Imprint</h2>
     </footer>
   );
 }
