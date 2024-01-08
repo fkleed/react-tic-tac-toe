@@ -116,13 +116,13 @@ button.table-item {
   justify-content: center;
 }
 
-.history-container ul {
+.history-container li {
   flex: 100%;
   display: flex;
   justify-content: center;
 }
 
-.history-container div button {
+.history-container li button {
   width: 90%;
   background: none;
   color: inherit;

@@ -29,8 +29,8 @@ export default function Game() {
     setCurrentMove(nextHistory.length - 1);
   }
 
-  function handleChangeHistory(i) {
-    console.log(`Change to history ${i}`);
+  function handleChangeHistory(nextMove) {
+    setCurrentMove(nextMove);
   }
 
   return (
