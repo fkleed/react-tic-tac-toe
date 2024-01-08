@@ -7,6 +7,7 @@
   width: 100vw;
   min-height: 100vh;
   --main-bg-color: rgb(213, 240, 193, 0.8);
+  --secondary-bg-color: rgb(249, 247, 201, 0.5);
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: min-content 1fr min-content;
@@ -36,6 +37,7 @@ footer {
 
 .game {
   grid-area: game;
+  background-color: var(--secondary-bg-color);
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: min-content 1fr;
@@ -56,16 +58,9 @@ footer {
   align-items: center;
 }
 
-.table-container {
-  width: 300px;
-  height: 300px;
-}
-
 td {
   width: 100px;
   height: 100px;
-  min-width: 100px;
-  min-height: 100px;
   padding: 0;
 }
 

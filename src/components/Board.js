@@ -1,7 +1,6 @@
 export default function Board({ squares, onPlay }) {
   return (
     <div className="board">
-      <div className="table-container">
         <table>
           <tbody>
             <tr>
@@ -40,7 +39,6 @@ export default function Board({ squares, onPlay }) {
           </tbody>
         </table>
       </div>
-    </div>
   );
 }
 
