@@ -1,11 +1,13 @@
-function App() {
+import Header from "./layout/Header.js";
+import Footer from "./layout/Footer.js";
+import Game from "./components/Game.js";
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-       <h1>Hello World!</h1>
-      </header>
+    <div className="app">
+      <Header />
+      <Game />
+      <Footer />
     </div>
   );
 }
-
-export default App;
